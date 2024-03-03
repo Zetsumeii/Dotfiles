@@ -48,13 +48,22 @@ return packer.startup(function(use)
     use("tpope/vim-surround")
     use("vim-scripts/ReplaceWithRegister")
 
-    use("numToStr/Comment.nvim")
+    --use("numToStr/Comment.nvim")
 
     -- file explorer
-    use("nvim-tree/nvim-tree.lua")
-
     use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
     use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+
+	use {
+	  "nvim-neo-tree/neo-tree.nvim",
+	    branch = "v3.x",
+	    requires = {
+	      "nvim-lua/plenary.nvim",
+	      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+	      "MunifTanjim/nui.nvim",
+	      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+	    }
+	  }
 
     -- icons
     use("kyazdani42/nvim-web-devicons")
@@ -87,6 +96,19 @@ return packer.startup(function(use)
 
     --treesitter
     use({"nvim-treesitter/nvim-treesitter"})
+
+    -- copilot
+    use({
+      "jackMort/ChatGPT.nvim",
+        config = function()
+          require("chatgpt").setup()
+        end,
+        requires = {
+          "MunifTanjim/nui.nvim",
+          "nvim-lua/plenary.nvim",
+          "nvim-telescope/telescope.nvim"
+        }
+    })
 
     --clang
     use({"rhysd/vim-clang-format"})

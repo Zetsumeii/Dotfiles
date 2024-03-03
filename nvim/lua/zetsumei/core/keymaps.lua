@@ -17,7 +17,7 @@ keymap.set("v", "<Up>", "h")
 
 -- nvim-tree
 
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>e", ":Neotree<CR>")
 
 -- telescope
 
