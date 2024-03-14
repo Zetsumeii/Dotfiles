@@ -128,11 +128,13 @@ alias trouve="grep -rn --exclude-dir=deps --exclude-dir=build"
 alias code="xflock4"
 alias nano="xflock4"
 alias v="nvim"
+alias l="ls -la"
 alias ls='lsd'
 alias tree="lsd --tree"
 alias exot="exit"
 alias top="btm"
 alias ckear="clear"
+alias cmear="clear"
 alias asc="asciiquarium"
 alias tmuxconf="nvim ~/.tmux.conf"
 alias zshconf="nvim ~/.zshrc"
@@ -141,6 +143,7 @@ alias sd="pkill alacritty"
 alias prime-run="__NV_PRIME_RENDER_OFFLOAD __GLX_VENDOR_LIBRARY_NAME=nvidia"
 alias t="tmux"
 alias lock="xflock4"
+alias rr="ranger"
 
 #clear_display() {
 #    ls

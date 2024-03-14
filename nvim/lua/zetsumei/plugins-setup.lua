@@ -37,9 +37,13 @@ return packer.startup(function(use)
     use({"Abstract-IDE/Abstract-cs"})
     use({"Mofiqul/vscode.nvim"})
     use({"shaunsingh/nord.nvim"})
+    use({ "rose-pine/neovim", as = "rose-pine" })
 
     --indent_blankline
     use({"lukas-reineke/indent-blankline.nvim"})
+
+    --clipboard
+    use({"Shougo/vim-clipboard"})
 
     --transpartent
     use({"xiyaowong/transparent.nvim"})
