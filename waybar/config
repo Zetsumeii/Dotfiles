@@ -45,11 +45,11 @@
       "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
     },
     "network": {
-      "interface": "wlo1",
+      "interface": "wlp3s0",
       "format": "{ifname}",
       "format-wifi": "<span color='#b4befe'> </span>{essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
-      "format-disconnected": "<span color='#b4befe'> </span>127.0.0.1",
+      "format-disconnected": "<span color='#b4befe'> </span>",
       "tooltip": false,
     },
     "battery": {

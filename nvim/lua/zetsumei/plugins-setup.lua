@@ -38,12 +38,11 @@ return packer.startup(function(use)
     use({"Mofiqul/vscode.nvim"})
     use({"shaunsingh/nord.nvim"})
     use({ "rose-pine/neovim", as = "rose-pine" })
+    use({"dam9000/colorscheme-midnightblue"})
+    use {'oneslash/helix-nvim', tag = "*"}
 
     --indent_blankline
     use({"lukas-reineke/indent-blankline.nvim"})
-
-    --clipboard
-    use({"Shougo/vim-clipboard"})
 
     --transpartent
     use({"xiyaowong/transparent.nvim"})

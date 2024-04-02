@@ -110,10 +110,20 @@ _G.packer_plugins = {
     path = "/home/zetsumei/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["colorscheme-midnightblue"] = {
+    loaded = true,
+    path = "/home/zetsumei/.local/share/nvim/site/pack/packer/start/colorscheme-midnightblue",
+    url = "https://github.com/dam9000/colorscheme-midnightblue"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/zetsumei/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["helix-nvim"] = {
+    loaded = true,
+    path = "/home/zetsumei/.local/share/nvim/site/pack/packer/start/helix-nvim",
+    url = "https://github.com/oneslash/helix-nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -225,11 +235,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zetsumei/.local/share/nvim/site/pack/packer/start/vim-clang-format",
     url = "https://github.com/rhysd/vim-clang-format"
-  },
-  ["vim-clipboard"] = {
-    loaded = true,
-    path = "/home/zetsumei/.local/share/nvim/site/pack/packer/start/vim-clipboard",
-    url = "https://github.com/Shougo/vim-clipboard"
   },
   ["vim-moonfly-colors"] = {
     loaded = true,
