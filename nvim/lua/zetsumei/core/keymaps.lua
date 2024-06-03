@@ -1,6 +1,7 @@
 vim.g.mapleader = ","
 
 local keymap = vim.keymap
+local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 -- basic keymaps
 
@@ -26,3 +27,6 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fn", "<cmd>Telescope help_tags<cr>")
+
+-- lsp
+vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, bufopts)
