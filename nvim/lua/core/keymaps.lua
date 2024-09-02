@@ -1,5 +1,3 @@
-vim.g.mapleader = ","
-
 local keymap = vim.keymap
 local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
