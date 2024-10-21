@@ -36,6 +36,31 @@ require('lazy').setup({
     "dam9000/colorscheme-midnightblue",
     'nonetallt/vim-neon-dark',
     'backdround/melting',
+    'daenuprobst/lcarsoft',
+    {
+        'mustardfrog/pinkish_day',
+        lazy = true,
+        dependencies = { 'rktjmp/lush.nvim' },
+    },
+    {
+      'comfysage/evergarden',
+      priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+      opts = {
+        transparent_background = true,
+        contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
+        overrides = { }, -- add custom overrides
+      }
+    },
+    'roobert/palette.nvim',
+    {
+      "timofurrer/edelweiss",
+      lazy = false, -- make sure we load this during startup, because it's the main colorscheme
+      priority = 1000, -- make sure to load this before all the other start plugins
+      config = function(plugin)
+        vim.opt.rtp:append(plugin.dir .. "/nvim")
+        vim.cmd([[colorscheme edelweiss]])
+      end
+    },
 
     -- notification
      'rcarriga/nvim-notify',
@@ -49,6 +74,25 @@ require('lazy').setup({
     -- essentials
     "tpope/vim-surround",
     "vim-scripts/ReplaceWithRegister",
+
+    -- leetcode
+    {
+        "kawre/leetcode.nvim",
+        build = ":TSUpdate html",
+        dependencies = {
+            "nvim-telescope/telescope.nvim",
+            "nvim-lua/plenary.nvim", -- required by telescope
+            "MunifTanjim/nui.nvim",
+
+            -- optional
+            "nvim-treesitter/nvim-treesitter",
+            "rcarriga/nvim-notify",
+            "nvim-tree/nvim-web-devicons",
+        },
+        opts = {
+            -- configuration goes here
+        },
+    },
 
     -- file explorer
     {"nvim-telescope/telescope-fzf-native.nvim", build = "make"},
